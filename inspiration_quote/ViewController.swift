@@ -7,20 +7,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController  {
     @IBOutlet weak var first_quote: UIImageView!
-    var count = 0;
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        first_quote.image = UIImage(imageLiteralResourceName: "index")
-        
     }
 
+    func loadImage(from url: URL) {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error downloading image: \(error)")
+                return
+            }
+            guard let imageData = data else {
+                print("No image data found")
+                return
+            }
+            let image = UIImage(data: imageData)
+            // Display the image in a UIImageView
+            DispatchQueue.main.async {
+                self.first_quote.image = image
+            }
+        }
+        task.resume()
+    }
+
+    
+    
     @IBAction func chnage_image(_ sender: UIButton) {
-        first_quote.image = UIImage(imageLiteralResourceName: "100-of-the-Most-Uplifting-Quotes-Ever5-scaled")
-        print("Count is " , count + 5)
+        let url = URL(string : "https://picsum.photos/200/300")
+        loadImage(from: url!)
+       
+
     }
     
 }

@@ -15,45 +15,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Inspired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58g-Dc-xBZ">
-                                <rect key="frame" x="150" y="68" width="107" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.96470588235294119" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="100-of-the-Most-Uplifting-Quotes-Ever5-scaled" translatesAutoresizingMaskIntoConstraints="NO" id="wNJ-hi-VEt">
-                                <rect key="frame" x="46" y="122" width="300" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="short-inspirational-quotes47-1603757745" translatesAutoresizingMaskIntoConstraints="NO" id="8cf-Ux-rx0">
-                                <rect key="frame" x="53" y="270" width="300" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-AN-P2s">
-                                <rect key="frame" x="126" y="740" width="141" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Change Picture"/>
-                                <connections>
-                                    <action selector="chnage_image:" destination="BYZ-38-t0r" eventType="touchDown" id="1St-dO-JEA"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-Rm-7mA">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Inspired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58g-Dc-xBZ">
+                                        <rect key="frame" x="143.33333333333334" y="0.0" width="106.33333333333334" height="23.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.96470588235294119" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100-of-the-Most-Uplifting-Quotes-Ever5-scaled" translatesAutoresizingMaskIntoConstraints="NO" id="0Jl-xI-nkQ">
+                                        <rect key="frame" x="0.0" y="33.333333333333314" width="393" height="635.66666666666674"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-AN-P2s">
+                                        <rect key="frame" x="126" y="679" width="141" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="R3A-7b-QDN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Change Picture">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="chnage_image:" destination="BYZ-38-t0r" eventType="touchDown" id="1St-dO-JEA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dlh-AN-P2s" firstAttribute="top" secondItem="0Jl-xI-nkQ" secondAttribute="bottom" constant="100" id="GYx-FD-ecY"/>
+                                    <constraint firstItem="Dlh-AN-P2s" firstAttribute="top" secondItem="0Jl-xI-nkQ" secondAttribute="bottom" constant="100" id="Kjs-VH-HW4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dlh-AN-P2s" secondAttribute="bottom" constant="10" id="Tf8-XJ-KXs"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.65490196078431373" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Loq-Rm-7mA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3GY-7x-2qW"/>
+                            <constraint firstItem="Loq-Rm-7mA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kX1-5a-YJE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Loq-Rm-7mA" secondAttribute="bottom" id="qB9-km-KVm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Loq-Rm-7mA" secondAttribute="trailing" id="v2M-QD-WG2"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="first_quote" destination="wNJ-hi-VEt" id="r8I-hc-a1g"/>
+                        <outlet property="first_quote" destination="0Jl-xI-nkQ" id="P2r-3d-Vsx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149" y="-13"/>
+            <point key="canvasLocation" x="-150.38167938931298" y="-13.380281690140846"/>
         </scene>
     </scenes>
     <resources>
         <image name="100-of-the-Most-Uplifting-Quotes-Ever5-scaled" width="700" height="700"/>
-        <image name="short-inspirational-quotes47-1603757745" width="480" height="720"/>
     </resources>
 </document>
