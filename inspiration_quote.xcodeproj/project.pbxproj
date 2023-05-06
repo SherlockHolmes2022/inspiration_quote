@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCC7306C2A0660E500B34BCE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7306B2A0660E500B34BCE /* DatabaseManager.swift */; };
 		DCF9657929FE646C00D5CEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9657829FE646C00D5CEAA /* AppDelegate.swift */; };
 		DCF9657B29FE646C00D5CEAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9657A29FE646C00D5CEAA /* SceneDelegate.swift */; };
 		DCF9657D29FE646C00D5CEAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9657C29FE646C00D5CEAA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCC7306B2A0660E500B34BCE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		DCF9657529FE646C00D5CEAA /* inspiration_quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inspiration_quote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF9657829FE646C00D5CEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF9657A29FE646C00D5CEAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DCF9657829FE646C00D5CEAA /* AppDelegate.swift */,
 				DCF9657A29FE646C00D5CEAA /* SceneDelegate.swift */,
 				DCF9657C29FE646C00D5CEAA /* ViewController.swift */,
+				DCC7306B2A0660E500B34BCE /* DatabaseManager.swift */,
 				DCF9657E29FE646C00D5CEAA /* Main.storyboard */,
 				DCF9658129FE646D00D5CEAA /* Assets.xcassets */,
 				DCF9658329FE646D00D5CEAA /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC7306C2A0660E500B34BCE /* DatabaseManager.swift in Sources */,
 				DCF9657D29FE646C00D5CEAA /* ViewController.swift in Sources */,
 				DCF9657929FE646C00D5CEAA /* AppDelegate.swift in Sources */,
 				DCF9657B29FE646C00D5CEAA /* SceneDelegate.swift in Sources */,

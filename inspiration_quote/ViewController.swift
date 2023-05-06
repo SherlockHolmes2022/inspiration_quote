@@ -4,15 +4,18 @@
 //
 //  Created by user239088 on 4/30/23.
 //
-
 import UIKit
 
 class ViewController: UIViewController  {
     @IBOutlet weak var first_quote: UIImageView!
+    var currentImageURL : URL!
+    let url = URL(string : "https://picsum.photos/200/300")
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadImage(from: url!)
     }
+    
 
     func loadImage(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -20,6 +23,7 @@ class ViewController: UIViewController  {
                 print("Error downloading image: \(error)")
                 return
             }
+            self.currentImageURL = response?.url
             guard let imageData = data else {
                 print("No image data found")
                 return
@@ -36,11 +40,20 @@ class ViewController: UIViewController  {
     
     
     @IBAction func chnage_image(_ sender: UIButton) {
-        let url = URL(string : "https://picsum.photos/200/300")
         loadImage(from: url!)
-       
-
     }
     
+    
+    @IBAction func shareImage(_ sender: UIButton) {
+        let activityViewController = UIActivityViewController(activityItems: [currentImageURL.absoluteString], applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.print]
+
+        if let popoverController = activityViewController.popoverPresentationController {
+            popoverController.sourceView = sender // `sender` is the button or view that triggered the share action
+            popoverController.sourceRect = sender.bounds
+        }
+
+        present(activityViewController, animated: true, completion: nil)
+    }
 }
 
